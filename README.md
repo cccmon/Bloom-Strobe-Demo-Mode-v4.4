@@ -139,10 +139,6 @@ PAUSE LED OFF
 
 ## Bilder
 
-![Motor](images/motor.jpg)
-
-![Motor Controller](images/motor_controller.jpg)
-
 ![IMG_2115](images/IMG_2115.jpeg)
 
 ![IMG_2116](images/IMG_2116.jpeg)
@@ -150,6 +146,10 @@ PAUSE LED OFF
 ![IMG_2117](images/IMG_2117.jpeg)
 
 ![IMG_2118](images/IMG_2118.jpeg)
+
+![Motor](images/motor.jpg)
+
+![Motor Controller](images/motor_controller.jpg)
 
 ---
 
@@ -164,7 +164,6 @@ Die STL-Dateien für die 3D-Druckkomponenten der Bloom-Skulptur können hier her
 - [Twist_Zoetrope_Double_Ring-Adapte.stl](stl/Twist_Zoetrope_Double_Ring-Adapte.stl)
 - [Zoetrope_cube_Adapte.stl](stl/Zoetrope_cube_Adapte.stl)
 
-> Lege dazu einen Ordner `stl` im Repository an und lade die Dateien hinein.
 
 ---
 
