@@ -14,7 +14,8 @@ Ein Arduino-Projekt zur Steuerung eines LED-Streifens für die Bloom-Skulptur vo
 6. [Frequenzen & Ablauf](#frequenzen--ablauf)
 7. [Ablaufdiagramm](#ablaufdiagramm)
 8. [Installation](#installation)
-9. [Lizenz](#lizenz)
+9. [Bilder](#bilder)
+10. [Lizenz](#lizenz)
 
 ---
 
@@ -24,64 +25,64 @@ Dieses Projekt steuert einen LED-Streifen über einen MOSFET (z. B. IRLZ34N), 
 
 Funktionen:
 
-* **Manueller Modus**: Steuerung der Strobe-Frequenz über ein Potentiometer.
-* **Demo-Modus**: Automatische Zyklen mit festen Frequenzen und Pausen.
-* **Automatischer Start**: Demo beginnt nach 10 s Inaktivität am Potentiometer.
+- **Manueller Modus**: Steuerung der Strobe-Frequenz über ein Potentiometer.
+- **Demo-Modus**: Automatische Zyklen mit festen Frequenzen und Pausen.
+- **Automatischer Start**: Demo beginnt nach 10 s Inaktivität am Potentiometer.
 
 ---
 
 ## Hardware
 
-* Arduino Uno / Nano / kompatibel
-* LED-Streifen (5–12 V, über MOSFET angesteuert)
-* IRLZ34N MOSFET
-* Potentiometer (10 kΩ empfohlen)
-* Verbindungskabel, Netzteil passend zum LED-Streifen
+- Arduino Uno / Nano / kompatibel
+- LED-Streifen (5–12 V, über MOSFET angesteuert)
+- IRLZ34N MOSFET
+- Potentiometer (10 kΩ empfohlen)
+- Verbindungskabel, Netzteil passend zum LED-Streifen
 
 ---
 
 ## Pin-Belegung
 
-| Bauteil        | Arduino Pin        |
-| -------------- | ------------------ |
-| MOSFET Gate    | D9                 |
-| Potentiometer  | A0                 |
-| GND            | GND                |
-| LED-Streifen + | externes Netzteil  |
-| LED-Streifen - | MOSFET Drain → GND |
+| Bauteil           | Arduino Pin |
+|------------------|------------|
+| MOSFET Gate       | D9         |
+| Potentiometer     | A0         |
+| GND               | GND        |
+| LED-Streifen +    | externes Netzteil |
+| LED-Streifen -    | MOSFET Drain → GND |
 
 ---
 
 ## Manueller Modus
 
-* Frequenzbereich: **20–80 Hz**
-* Links = LED aus, rechts = maximale Frequenz
-* Potentiometer-Bewegung **unterbricht Demo sofort**
-* Frequenz wird in **0,5 Hz Schritten** gerundet
+- Frequenzbereich: **20–80 Hz**
+- Links = LED aus, rechts = maximale Frequenz
+- Potentiometer-Bewegung **unterbricht Demo sofort**
+- Frequenz wird in **0,5 Hz Schritten** gerundet
 
 ---
 
 ## Demo-Modus
 
-* Startet automatisch nach **10 s ohne Poti-Bewegung**
-* Zwei feste Demo-Zyklen:
+- Startet automatisch nach **10 s ohne Poti-Bewegung**
+- Zwei feste Demo-Zyklen: 
 
 1. **Demo1** – 36 Hz, 10 s
 2. **Demo2** – 72 Hz, 10 s
 
-* **3 vollständige Wiederholungen** → danach **Pause 10 s**
-* Zyklus wiederholt sich
+- **3 vollständige Wiederholungen** → danach **Pause 10 s**
+- Zyklus wiederholt sich
 
 ---
 
 ## Frequenzen & Ablauf
 
-| Phase              | Frequenz | Dauer | Wiederholung |
-| ------------------ | -------- | ----- | ------------ |
-| Demo1              | 36 Hz    | 10 s  | 3×           |
-| Demo2              | 72 Hz    | 10 s  | 3×           |
-| Pause              | LED aus  | 10 s  | 1×           |
-| → wieder Demo1 ... | …        | …     | …            |
+| Phase      | Frequenz | Dauer  | Wiederholung |
+|------------|----------|--------|--------------|
+| Demo1      | 36 Hz    | 10 s   | 3×           |
+| Demo2      | 72 Hz    | 10 s   | 3×           |
+| Pause      | LED aus  | 10 s   | 1×           |
+| → wieder Demo1 ... | … | … | … |
 
 ---
 
@@ -124,6 +125,18 @@ Hz: 72.0
 ...
 PAUSE LED OFF
 ```
+
+---
+
+## Bilder
+
+![IMG_2115](images/IMG_2115.jpeg)
+
+![IMG_2116](images/IMG_2116.jpeg)
+
+![IMG_2117](images/IMG_2117.jpeg)
+
+![IMG_2118](images/IMG_2118.jpeg)
 
 ---
 
